@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "92050814650",
+    "firebase_url": "https://movieson2macdatabase.firebaseio.com",
+    "project_id": "movieson2macdatabase",
+    "storage_bucket": "movieson2macdatabase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92050814650:android:69d12e34610c7251",
+        "android_client_info": {
+          "package_name": "com.example2.bhavinpanchani.movieson"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "92050814650-g03kpui82fvjo03cjpml8rd9gii6impv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example2.bhavinpanchani.movieson",
+            "certificate_hash": "55e32947123c6672bb171da908ccd73f97dc39ed"
+          }
+        },
+        {
+          "client_id": "92050814650-7it53vepghg66eq5hjqnbip8fsdetbit.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_vlp5n_gP-mMQ3MU5w35BCurLpB5Zk2E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "92050814650-7it53vepghg66eq5hjqnbip8fsdetbit.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
