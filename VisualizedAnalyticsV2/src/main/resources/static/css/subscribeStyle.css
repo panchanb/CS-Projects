@@ -1,0 +1,78 @@
+.div{
+    font-family: 'Open Sans';
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+body{
+	font-family: 'Open Sans';
+}
+.layer {
+    /*background-color: rgba(248, 247, 216, 0.7);*/
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    margin-top: 20%;
+    margin-right: 5px;
+    padding: 5px;
+    color:grey;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+    transition: 0.3s;
+    width: 30%;
+    height: 250px;
+    border-radius: 8px;
+    display: inline-block;
+    background-color: rgba(0,0,0,0.2); 
+    -webkit-backdrop-filter: blur(50px);
+  	backdrop-filter: blur(50px); 
+  }
+  
+.card:hover {
+    box-shadow: 0 32px 64px 0 rgba(0,0,0,0.2);
+    background-color: rgba(220,220,220,0.2);
+    /* opacity: 0.9; */
+}
+
+h1{
+    font-size:40px;
+    color: lightgrey;
+}
+
+h2{
+	color: lightgrey;
+}
+
+.btn{
+    color:white;
+    background-color: lightgreen;
+    width: 50%;
+    font-size: 14px;
+    border-radius: 4px;
+    border-width: 1px;
+    padding: 8px;
+    cursor: pointer;
+}
+.btn:hover{
+    color:white;
+    background-color: green;
+    border-radius: 4px;
+    border-width: 1px;
+    padding: 8px;
+}
+.btn:disabled{
+    background-color: lightgrey;
+    cursor: not-allowed;
+}
+
+.terms{
+    margin-top:12px;
+}
+
+

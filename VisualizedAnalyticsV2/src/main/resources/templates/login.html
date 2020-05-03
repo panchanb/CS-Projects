@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8" />
+        <title>Login</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/indexStyle.css">
+        <link rel="stylesheet" href="css/marketStyle.css">
+        <link rel="stylesheet" href="css/loginStyle.css">
+        
+        <style>
+            body{
+                background-image: url("images/background-4.jpg");
+                background-size: cover;
+            }
+        </style>
+        
+    </head>
+    <body>
+    
+    	<div class="layer">
+        <div class = "menu">
+            <a class = "menu-item-title" href="index.html">Visualized Analytics</a>
+            <a class = "menu-item nav-item nav-margin" href="index.html">Home <font color=black>/</font></a>
+            <a class = "menu-item nav-item" th:href="@{/login}">Login</a>
+            <a class = "menu-item item2" th:href="@{/login}">Login</a>
+            <a class = "menu-item item3" href="subscribe.html">Subscribe</a>
+        </div>
+
+		<div th:if="${param.error}">
+        	<div class="log-error">Invalid username or password.</div>
+        </div>
+        <div th:if="${param.logout}">
+            <div class="log-error">You have been logged out.</div>
+        </div>
+
+        <div class="form">
+            <form action="#" th:action="@{/login}" method="POST">
+                <h3>Login</h3>
+                <hr>
+                <div class="form-items">
+                    <label>Email: </label>
+                    <input class="input" name="username" type="text" required>
+                    <br>
+                    <label>Password: </label>
+                    	<!-- Regular expresion is removed in validating the password beacuse it is not required in login page but only in register page -->
+                    <input class="input" name="password" type="password" title="Password should contain atleast one uppercase, one lowercase, one number and minimum of 8 characters" required>
+                    <input type="checkbox"> Remember me
+                    <input class="login-btn" type="submit" value="Login">
+                    <a class="reset-btn" href="/reset_password">Reset Password</a>
+                </div>
+            </form>
+        </div>
+        </div>
+
+    </body>
+</html>

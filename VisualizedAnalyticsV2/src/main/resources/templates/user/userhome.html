@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <title>Secured</title>
+</head>
+<body>
+<div>
+    <h1>This is a secured user home page!</h1>
+    <span sec:authorize="isAuthenticated()" style="display: inline-block;">
+          Logged user: <span sec:authentication="name"></span> |
+          Roles: <span sec:authentication="principal.authorities"></span> 
+          <a th:href="@{/logout}">Sign Out</a>
+    </span>
+    <p><a href="/" th:href="@{/}">Back to home page</a></p>
+    <p><a href="/userinfo" th:href="@{/userinfo}">Go to user info page</a></p>
+</div>
+</body>
+</html>

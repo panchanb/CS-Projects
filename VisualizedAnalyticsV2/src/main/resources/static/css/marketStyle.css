@@ -1,0 +1,134 @@
+/* Markets.html */
+
+.layer {
+    /*background-color: rgba(248, 247, 216, 0.7);*/
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* This is the Menu design for every page expect the index.html */
+.menu{
+    font-family: 'Open Sans';
+    /* border-bottom-style: solid; */
+    border-color: rgba(0, 0, 0, 0.5);
+    background-color: white;
+	background-color: rgba(0, 0, 0, 0.3);
+  	-webkit-backdrop-filter: blur(30px);
+  	backdrop-filter: blur(30px);
+  	padding: 10px;   
+    text-align: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.menu-item-title{
+    float: left;
+    color: rgb(107, 176, 250);
+    text-decoration: none;
+}
+
+/* Menu itmes */
+.menu-item:link {
+    text-decoration: none;
+    /* color: rgb(107, 176, 250); */
+    color: rgb(107, 176, 250);
+} 
+.menu-item:hover {
+    color: darkblue;
+}  
+.menu-item:active {
+    text-decoration: underline;
+}
+.menu-item:visited{
+    color: rgb(107, 176, 250);
+}
+
+.item2{
+    float: right;
+    margin-right: 10px;
+}
+.item3{
+    float: right;
+    margin-right: 10px;
+}
+
+.user{
+	margin-left: 32%;
+	margin-top: 4%;
+	color: blue;
+	font-size: 40px;
+}
+
+.nav-item{
+    color: lightcyan;
+}
+.nav-margin{
+    /* margin-left: 38%; */
+}
+
+.error1{
+	background-color: rgba(255, 97, 97, 0.7);
+	border-radius: 8px;
+	color: white;
+	width: 40%;
+	margin: auto;
+	margin-top: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+/* Both images section */
+.MarketImages{
+    display: block;
+    margin-top: 10px;
+    /* margin-left: 40%; */
+    text-align: center;
+}
+
+/* Induvidal image design */
+.image{
+    margin-top: 100px;
+    margin-left: 15px;
+    border-radius: 10px;
+    height: 200px;
+    width: 20%;
+}
+
+/* Text desgin for buttons */
+.MarketTxt{
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Both button design */
+.MarketBtn{
+    font-family: 'Open Sans';
+    color: rgb(99, 98, 98);
+    padding: 14px 25px;
+    font-size: 28px;
+    border-color: rgb(115, 115, 120);
+    border-radius: 10px;
+    width: 12%;
+    margin-left: 49px;
+    margin-right: 29px;
+}
+.MarketBtn:link, .MarketBtn:visited{
+    display: inline-block;
+    background-color: #51fcff;
+    color: rgb(77, 77, 77);
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.MarketBtn:hover{
+    color: rgb(255, 255, 255);
+    background-color: blue;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Markets</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/indexStyle.css">
+        <link rel="stylesheet" href="css/marketStyle.css">
+        
+        <style>
+            body{
+            background-image: url("images/background-6.jpg");
+            background-size: cover;
+            }
+        </style>
+        
+    </head>
+    <body>
+    
+    <div class="layer">
+        <div class = "menu">
+            <a class = "menu-item-title" th:href="@{/index}">Visualized Analytics</a>
+            <a class = "menu-item nav-item nav-margin" th:href="@{index}">Home <font color=black>/</font></a>
+            <a class = "menu-item nav-item" th:href="@{/userhome}">User Home – Markets</a>
+            <a class = "menu-item item2 logout" style="color: red;" th:href="@{/logout}">Logout</a>
+            <a class = "menu-item item2 logout" style="color: blue;" th:href="@{/userinfo}"><span sec:authentication="name"></span> <font color = black;> |</font></a>
+        </div>
+
+		<span class = "user" sec:authorize="isAuthenticated()" style="display: inline-block;">
+          Welcome <span sec:authentication="name"></span>!
+    </span>
+
+        <div>
+            <div class = "MarketImages" >
+                <img class = "image" src="images/stocks.jpeg">
+                <img class = "image"src="images/commodities.jpeg">
+            </div>
+            <div class = "MarketTxt">
+                <a class="MarketBtn" href="/stocks">Stocks</a>
+                <a class="MarketBtn" href="commodities.html">Commodities</a>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

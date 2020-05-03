@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/indexStyle.css">
+    <link rel="stylesheet" href="css/marketStyle.css">
+   	<link rel="stylesheet" href="css/loginStyle.css">
+    <title>Registration</title>
+    
+    <style>
+        body{
+            background-image: url("images/background-6.jpg");
+            /* background-size: cover; */
+            postion: absolute;
+        }
+    </style>
+</head>
+
+<body>
+	
+	<div class="register-layer">
+    <div class = "menu">
+            <a class = "menu-item-title" href="index.html">Visualized Analytics</a>
+            <a class = "menu-item nav-item nav-margin" href="index.html">Home <font color=black>/</font></a>
+            <a class = "menu-item nav-item" href="subscribe.html">Pricing <font color=black>/</font></a>
+            <a class = "menu-item nav-item" href="/registerpage">Register</a>
+            <a class = "menu-item item2" href="/login" th:href="@{/login}">Login</a>
+            <a class = "menu-item item3" href="subscribe.html">Subscribe</a>
+        </div>
+
+    <br>
+    <br>
+	
+	<div th:if="${param.success}">
+         <div class="message">Registered successfully!</div>
+    </div>
+
+    <div class="form2">
+    
+	    <form th:action="@{/register}" th:object="${user}" method="post">
+	    <h3>Register</h3>
+	    <hr>
+	    
+	    <div class="form-items">
+	        <p class="error-message" th:if="${#fields.hasGlobalErrors()}" th:each="error : ${#fields.errors('global')}" 
+	        	th:text="${error}">	Validation error</p>
+	        
+	        <div th:classappend="${#fields.hasErrors('firstName')}? 'has-error':''">
+	            <label>First name</label> 
+	            <input class="input" id="name" th:field="*{firstName}" />
+	            <p class = "error" th:each="error: ${#fields.errors('firstName')}" th:text="${error}"> Validation error</p>
+	        </div>
+	        
+	        <div th:classappend="${#fields.hasErrors('lastName')}? 'has-error':''">
+	            <label>Last name</label> 
+	            <input class="input" id="name" th:field="*{lastName}" />
+	            <p class = "error" th:each="error : ${#fields.errors('lastName')}" th:text="${error}"> Validation error</p>
+	        </div>
+	        
+	        <div th:classappend="${#fields.hasErrors('email')}? 'has-error':''">
+	            <label>E-mail</label>
+	            <input class="input" id="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,3})+$" title="Email should look like: name@example.com" th:field="*{email}" />
+	            <p class = "error" th:each="error : ${#fields.errors('email')}" th:text="${error}"> Validation error</p>
+	        </div>
+	        
+	        <div th:classappend="${#fields.hasErrors('confirmEmail')}? 'has-error':''">
+	            <label>Confirm e-mail</label> 
+				<input class="input" id="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,3})+$" title="Email should look like: name@example.com" th:field="*{confirmEmail}" />
+	            <p class = "error" th:each="error : ${#fields.errors('confirmEmail')}" th:text="${error}"> Validation error</p>
+	        </div>
+	        
+	        <div th:classappend="${#fields.hasErrors('password')}? 'has-error':''">
+	            <label>Password</label> 
+	            <input class="input" id="pass1" type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" title="Password should contain atleast one Uppercase letter, one Lowercase letter, one number, one special character (@ $ ! % * ? &) and minimum of 8 characters" th:field="*{password}" />
+	            <p class = "error" th:each="error : ${#fields.errors('password')}" th:text="${error}"> Validation error</p>
+	        </div>
+	        
+	        <div th:classappend="${#fields.hasErrors('confirmPassword')}? 'has-error':''">
+	            <label >Confirm password</label> 
+	            <input class="input" id="pass2" type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@~$!%*?&]{8,}$" title="Password should contain atleast one Uppercase letter, one Lowercase letter, one number, one special character (@ $ ! % * ? &) and minimum of 8 characters" th:field="*{confirmPassword}" />
+	            <p class = "error" th:each="error : ${#fields.errors('confirmPassword')}" th:text="${error}"> Validation error</p>
+	        </div>
+	        
+	        <div th:classappend="${#fields.hasErrors('terms')}? 'has-error':''">
+	            <input class="checkbox" type="checkbox" th:field="*{terms}" /> 
+	            <label> I agree with the <a href="../../static/terms.html" th:href="@{/terms.html}" target="_blank">terms and conditions</a> for Registration.</label>
+	            <p class = "error" th:each="error : ${#fields.errors('terms')}" th:text="${error}"> Validation error</p>
+	        </div>
+	        
+	        <div>
+	            <button class="login-btn" onclick="passwordValidator();" type="submit">Register</button>
+	            <!-- <input class="login-btn" type="button" value="Register" onclick="passwordValidator();"> -->
+	            <span>Already registered? <a href="/login" th:href="@{/login}">Login here</a></span>
+	        </div>
+	  	</div>
+	    </form>
+    </div>
+    </div>
+    
+</body>
+</html>

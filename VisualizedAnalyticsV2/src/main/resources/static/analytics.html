@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Analytics</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/marketStyle.css">
+        <link rel="stylesheet" href="css/analyticsStyle.css">
+        <!-- <link rel="stylesheet" href="css/indexStyle.css"> -->
+        
+        <style>
+            body{
+            background-image: url("images/background-6.jpg");
+            background-size: cover;
+            }
+            .side-bar{
+            background-image: url("images/background-6.jpg");
+            background-size: cover;
+            }
+        </style>
+        
+    </head>
+    <body>
+	
+        <div class = "menu">
+            <a class = "menu-item-title" href="index.html">Visualized Analytics</a>
+            <a class = "menu-item nav-item nav-margin" href="index.html">Home <font color=black>/</font></a>
+            <a class = "menu-item nav-item" href="markets.html">Markets <font color=black>/</font></a>
+            <a class = "menu-item nav-item" href="stocks.html">Stocks <font color=black>/</font></a>
+            <a class = "menu-item nav-item" href="analytics.html">Apple (AAPL)</a>
+            <a class = "menu-item item2" href="/login">Login</a>
+            <a class = "menu-item item3" href="subscribe.html">Subscribe</a>
+        </div>
+
+        <ul class="side-bar">
+        <div class="layer">
+            <li><a class="active main-heading" href="#long-term-trend">LONG-TERM TREND</a></li>
+            <li><a class="sub-heading" href="#trend">Trend</a></li>
+            <li><a class="sub-heading" href="#deviation">Deviation</a></li>
+            <li><a class="sub-heading" href="#history">History</a></li>
+            <li><a class="main-heading"href="#price-to-earnings-to-growth-forward">P/E to growth forward</a></li>
+            <li><a class="sub-heading" href="#valuation">Valuation</a></li>
+            <li><a class="sub-heading" href="#pe-history">History</a></li>
+          </ul>
+          </div>
+
+            <div>
+            
+            <div class="error1">
+                    The information may be not latest! 
+                    <br>
+                    Please Subscribe or Login to see all the latest information.
+                </div>
+                    <h1 id = "long-term-trend">Long-Term Trend</h1>
+            
+                    <h2 id = "trend">Trend</h2>
+                    <img class = "image" src="images/apple-trend.png">
+                
+                    <h2 id = "deviation">Deviation</h2>
+                    <img class = "image" src="images/apple-deviation.png">
+
+                    <h2 id = "history">History</h2>
+                    <img class = "image" src="images/apple-deviation-history.png">
+
+                    <h1 id = "price-to-earnings-to-growth-forward">P/E to growth forward</h1>
+
+                    <h2 id = "valuation">Valuation</h2>
+
+					<div class="error2">
+	                    These information is not coming from the database! So it might not be accurate
+	                    <br>
+	                    Please Subscribe or Login to see all the latest information from the database.
+                	</div>
+					
+                    <div >
+                        <table class = "table" width = "70%">
+                            <thead>
+                            <tr>
+                                <th>Company</th>
+                                <th>Ticker</th>
+                                <th>Stock price</th>
+                                <th>Avg. Earnings Estimate (current year)</th>
+                                <th>Avg. Earnings Estimate (next year)</th>
+                                <th>Estimate Annual Growth</th>
+                                <th>Price/Earnings to Growth (forward)</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Facebook</td>
+                                    <td>FB</td>
+                                    <td>178</td>
+                                    <td>6.28</td>
+                                    <td>9.55</td>
+                                    <td>52.1%</td>
+                                    <td>0.37</td>
+                                </tr>
+                                <tr>
+                                    <td>Amazon</td>
+                                    <td>AMZN</td>
+                                    <td>1736</td>
+                                    <td>23.58</td>
+                                    <td>33.25</td>
+                                    <td>41.0%</td>
+                                    <td>1.28</td>
+                                </tr>
+                                <tr>
+                                    <td>Alibaba Group</td>
+                                    <td>BABA</td>
+                                    <td>167</td>
+                                    <td>6.88</td>
+                                    <td>8.7</td>
+                                    <td>26.5%</td>
+                                    <td>0.73</td>
+                                </tr>
+                                <tr>
+                                    <td>Microsoft</td>
+                                    <td>MFST</td>
+                                    <td>139</td>
+                                    <td>5.24</td>
+                                    <td>5.94</td>
+                                    <td>13.4%</td>
+                                    <td>1.75</td>
+                                </tr>
+                                <tr>
+                                    <td>Alphabet</td>
+                                    <td>GOOGL</td>
+                                    <td>1221</td>
+                                    <td>48.78</td>
+                                    <td>55.76</td>
+                                    <td>14.3%</td>
+                                    <td>1.53</td>
+                                </tr>
+                                <tr>
+                                    <td>PayPal</td>
+                                    <td>PYPL</td>
+                                    <td>104</td>
+                                    <td>3.15</td>
+                                    <td>3.52</td>
+                                    <td>11.7%</td>
+                                    <td>2.51</td>
+                                </tr>
+                                <tr>
+                                    <td>Netfilx</td>
+                                    <td>NFLX</td>
+                                    <td>268</td>
+                                    <td>3.24</td>
+                                    <td>5.66</td>
+                                    <td>74.7%</td>
+                                    <td>0.63</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1st Quartile</td>
+                                    <td>0.68</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Median</td>
+                                    <td>1.28</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3rd Quartile</td>
+                                    <td>1.64</td>
+                                </tr>
+                                <tr>
+                                    <td>Apple</td>
+                                    <td>AAPL</td>
+                                    <td>224</td>
+                                    <td>11.66</td>
+                                    <td>12.73</td>
+                                    <td>9.18%</td>
+                                    <td>1.92</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Implied Share Price</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1st Quartile</td>
+                                    <td>79</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Median</td>
+                                    <td>150</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3rd Quartile</td>
+                                    <td>192</td>
+                                </tr>
+                            </tbody>
+                            </table>
+                    </div>
+
+
+                <h2 id = "pe-history">History</h2>
+                <img class = "image" src="images/apple-valuation.png">
+        </div>
+    </body>
+</html>

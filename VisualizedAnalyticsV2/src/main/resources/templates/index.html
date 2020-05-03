@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Visualized Analytics</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/indexStyle.css">
+       	<link rel="stylesheet" href="css/marketStyle.css">
+        <style>
+            body{
+                background-image: url("images/background-3.jpg");
+                background-size: cover;
+           	}
+                
+            .layer {
+			    /*background-color: rgba(248, 247, 216, 0.7);*/
+			    background-color: rgba(0, 0, 0, 0.6);
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    width: 100%;
+			    height: 100%;
+			    -webkit-backdrop-filter: blur(5px);
+  				backdrop-filter: blur(8px);
+			}
+        </style>
+    </head>
+    <body>
+        <div class='layer'>
+        <div class = "menu0">
+            <a class = "menu-item0" th:href="@{/index}">Visualized Analytics</a>
+            <a class = "menu-item item2 logout" style="color: red;" th:href="@{/logout}">Logout</a>
+            <a class = "menu-item item2 logout" style="color: blue;" th:href="@{/userinfo}"><span sec:authentication="name"></span> <font color = black;> |</font></a>
+        </div>
+        
+        <div class = "logo2">
+            <h1>Visualized Analytics</h1>
+            <a class="startbtn" th:href="@{/userhome}">Go Home</a>
+        </div>
+        
+        <footer>
+        	<p> Copyright &copy Bhavin & Viharika. All rights reserved. </p>
+        	<p>Contact information: <a class="mail" href="mailto:panchanb@kean.edu"> panchanb@kean.edu</a> | <a class="mail" href="mailto:panchanb@kean.edu"> patelviha@kean.edu</a></p>
+        </footer>
+        
+        </div>
+    </body>
+</html>

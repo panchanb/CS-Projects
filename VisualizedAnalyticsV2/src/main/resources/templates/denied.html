@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <title>Access Denied</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/indexStyle.css">
+</head>
+
+<style>
+
+.nav-item{
+	margin-left:35%;
+	text-decoration: none;
+}
+
+.card{
+	font-family: 'Open Sans';
+	border-radius: 8px;
+	width: 40%;
+	padding: 30px;
+	padding-top: 10px;
+	text-align: center;
+	margin: auto;
+	margin-top: 8%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+	transition: 0.3s;
+ }
+ 
+ .card:hover{
+ 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+ }
+ 
+ .btn{
+ text-decoration: none;
+ background-color: lightgreen;
+ padding: 10px;
+ border-radius: 4px;
+ color: white;
+ box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+ }
+ 
+ .btn:hover{
+ 	background-color: green;
+ 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+ }
+	
+</style>
+
+<body>
+<div>
+
+	<div class = "menu0">
+            <a class = "menu-item0" href="index.html">Visualized Analytics</a>
+            <a class = "menu-item nav-item" href="#"><font color=black>~/</font>Access Denied</a>
+            <a class = "menu-item0 item-2" href="@{/login}">Login</a>
+            <a class = "menu-item0 item-3" href="subscribe.html">Subscribe</a>
+        </div>
+
+	<div class="card">
+	<h1>HTTP Status 403 - Access is denied</h1>
+    <span sec:authorize="isAuthenticated()" style="display: inline-block;">
+          Logged user: <span sec:authentication="name"></span> |
+          Roles: <span sec:authentication="principal.authorities"></span> 
+          <a th:href="@{/logout}">Sign Out</a>
+    </span>
+    <p>Please Subscribe or Login to see this page!</p>
+    <a class="btn" href="/" th:href="@{/subscribe.html}">Subscribe</a>
+    <a class="btn" href="/" th:href="@{/login}">Login</a>
+    </div>
+</div>
+</body>
+</html>

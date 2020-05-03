@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Analytics</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/marketStyle.css">
+        <link rel="stylesheet" href="css/analyticsStyle.css">
+        <!-- <link rel="stylesheet" href="css/indexStyle.css"> -->
+        
+        <style>
+            body{
+            background-image: url("images/background-6.jpg");
+            background-size: cover;
+            }
+            .side-bar{
+            background-image: url("images/background-6.jpg");
+            background-size: cover;
+            }
+        </style>
+        
+    </head>
+    <body>
+
+        <div class = "menu">
+            <a class = "menu-item-title" th:href="@{index}">Visualized Analytics</a>
+            <a class = "menu-item nav-item nav-margin" th:href="@{/index}">Home <font color=black>/</font></a>
+            <a class = "menu-item nav-item" th:href="@{/userhome}">User Home – Markets <font color=black>/</font></a>
+            <a class = "menu-item nav-item" th:href="@{/stocks}">Stocks <font color=black>/</font></a>
+            <a class = "menu-item nav-item" th:href="@{/analytics}">Apple (AAPL)</a>
+            <a class = "menu-item item2 logout" style="color: red;" th:href="@{/logout}">Logout</a>
+            <a class = "menu-item item2 logout" style="color: blue;" th:href="@{/userinfo}"><span sec:authentication="name"></span> <font color = black;> |</font></a>
+        </div>
+
+        <ul class="side-bar">
+        <div class="layer">
+            <li><a class="active main-heading" href="#long-term-trend">LONG-TERM TREND</a></li>
+            <li><a class="sub-heading" href="#trend">Trend</a></li>
+            <li><a class="sub-heading" href="#deviation">Deviation</a></li>
+            <li><a class="sub-heading" href="#history">History</a></li>
+            <li><a class="main-heading"href="#price-to-earnings-to-growth-forward">P/E to growth forward</a></li>
+            <li><a class="sub-heading" href="#valuation">Valuation</a></li>
+            <li><a class="sub-heading" href="#pe-history">History</a></li>
+         </div>
+         </ul>
+
+            <div>
+            	<div class="message1">
+                    Thank you for subscribing to our service <span sec:authentication="name"></span>! 
+                    <br>
+                    Here you will see all the latest information.
+                </div>
+                    <h1 id = "long-term-trend">Long-Term Trend</h1>
+            
+                    <h2 id = "trend">Trend</h2>
+                    <img class = "image" src="images/apple-trend.png">
+                
+                    <h2 id = "deviation">Deviation</h2>
+                    <img class = "image" src="images/apple-deviation.png">
+
+                    <h2 id = "history">History</h2>
+                    <img class = "image" src="images/apple-deviation-history.png">
+
+                    <h1 id = "price-to-earnings-to-growth-forward">P/E to growth forward</h1>
+
+                    <h2 id = "valuation">Valuation</h2>
+
+                    <div > 
+                     
+                    	<div class="message2">
+                    		This is latest information coming from our database.
+                        </div>
+                        
+                          <table>
+							<tr>
+								<th>Company</th>
+								<th>Ticker</th>
+								<th>Stock price</th>
+								<th>Avg. Earnings Estimate<br>(current year)</th>
+								<th>Avg. Earnings Estimate (next year)</th>
+	                               <th>Estimate Annual Growth</th>
+	                               <th>Price/Earnings to Growth (forward)</th>
+							</tr>
+				
+							<tr th:each="stock : ${allStocks}">
+						        <td th:text="${stock.company}"></td>
+						        <td th:text="${stock.ticker}"></td>
+						        <td th:text="'$' + ${stock.price}"></td>
+						        <td th:text="'$' + ${stock.this_year_earning}"></td>
+						        <td th:text="'$' + ${stock.next_year_earning}"></td>
+						        <td th:text="'$' + ${stock.growth}"></td>
+						        <td th:text="'$' + ${stock.pe_to_growth}"></td>    
+					      	</tr>
+						</table>
+                    </div>
+
+
+                <h2 id = "pe-history">History</h2>
+                <img class = "image" src="images/apple-valuation.png">
+        </div>
+    </body>
+</html>
