@@ -1,0 +1,38 @@
+/* index.html styling */
+body{
+    font-family: 'Open Sans';
+}
+.heading{
+    font-family: 'Open Sans';
+    font-size: 120px;
+    text-align: center;
+    margin-top: 15%;
+    color: rgb(116, 216, 249);
+}
+.sub-heading{
+    font-family: 'Open Sans';
+    font-size: 30px;
+    text-align: center;
+    margin-top: -5%;
+    color: grey;
+}
+.about-me-section{
+    margin-top: 30%;
+    /* text-align: center; */
+    margin-left: 20%;
+}
+.bhavin-image{
+    width: 25%;
+    border-radius: 50%;
+    vertical-align: top;
+}
+.about-me{
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.about-me1{
+    font-size: 30px;
+    position: relative;
+}
+
